@@ -6,6 +6,8 @@ server.set('view engine', 'ejs') // Seta uma configuração de view engine ejs.
 
 server.use(express.static('public')) // Middleware. Vai habilitar os arquivos estáticos da pasta /public.
 
+server.use(express.urlencoded({ extended: true })) // Libera o uso do req.body
+
 server.use(routes) // Usa as rotas
 
 server.listen(3000, () => console.log('Running...')) // Ouvindo na porta 3000 e informando que o server está rodando.
