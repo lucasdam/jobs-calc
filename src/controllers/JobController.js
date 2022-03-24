@@ -3,24 +3,6 @@ const JobUtils = require('../Utils/JobUtils') // Importa o jobUtils
 const Profile = require('../model/Profile') // Importa os dados de Profile
 
 module.exports = { // Habilita para exportação.
-    index(req, res) { // Request da página '/' e Response da renderização do index.html. Passando também o array de updatedJobs.
-        const jobs = Job.get() // Pega o array de Job e guarda em Jobs
-        const profile = Profile.get() // Pega os dados de Profile
-
-        const updatedJobs = jobs.map(job => { // Cálcule de tempo restante do job
-            const remaining = JobUtils.remainingDays(job)
-            const status = remaining <= 0 ? 'done' : 'progress'
-
-            return {
-                ...job, // Spread do job
-                remaining,
-                status,
-                budget: JobUtils.calculateBudget(job, profile["value-hour"])
-            }
-        })
-
-        return res.render('index', { jobs: updatedJobs })
-    },
     create(req, res) { // Renderiza a página de job
         return res.render('job')
     },
