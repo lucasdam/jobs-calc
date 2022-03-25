@@ -3,9 +3,10 @@ const Profile = require('../model/Profile') // Importa o model Profile
 const JobUtils = require('../Utils/JobUtils') // Importa o JobUtils
 
 module.exports = {
-    index(req, res) { // Request da página '/' e Response da renderização do index.html. Passando também o array de updatedJobs.
-        const jobs = Job.get() // Pega o array de Job e guarda em Jobs
-        const profile = Profile.get() // Pega os dados de Profile
+
+    async index(req, res) { // Request da página '/' e Response da renderização do index.html. Passando também o array de updatedJobs.
+        const jobs = await Job.get() // Pega o array de Job e guarda em Jobs
+        const profile = await Profile.get() // Pega os dados de Profile
 
         let statusCount = {
             progress: 0,
@@ -36,4 +37,5 @@ module.exports = {
     
         return res.render('index', { jobs: updatedJobs, profile: profile, statusCount: statusCount, freeHours: freeHours }) // Passa para o index.ejs alguns objetos com valores a serem renderizados lá
     }
+    
 }
