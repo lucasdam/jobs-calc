@@ -13,4 +13,4 @@ server.use(express.urlencoded({ extended: true })) // Libera o uso do req.body
 
 server.use(routes) // Usa as rotas
 
-server.listen(3000, () => console.log('Running...')) // Ouvindo na porta 3000 e informando que o server está rodando.
+server.listen(process.env.PORT || 3000, () => console.log('Running...')) // Ouvindo na porta 3000 e informando que o server está rodando.
