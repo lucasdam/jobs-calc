@@ -46,3 +46,5 @@ O objetivo deste projeto foi colocar em prática técnicas, conceitos e tecnolog
 ##### Passo 4 (opcional). Caso deseje recriar o banco, acesso o diretório `./src/db/`, remova o arquivo `database.sqlite` e execute o comando `npm run init-db`. 
 
 ##### Passo 5. Inicie a aplicação: `npm start` ou `npm run dev`
+
+##### Passo 6. Para acessar: `http://localhost:3000`
