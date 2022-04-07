@@ -37,7 +37,7 @@ O objetivo deste projeto foi colocar em prática técnicas, conceitos e tecnolog
 
 ### 📂 Como executar o projeto:
 
-##### Passo 1. Clone este repositório pelo seu terminal: `git clone https://github.com/lucasdam/jobs-calc.git`
+##### Passo 1. Clone este repositório pelo terminal: `git clone https://github.com/lucasdam/jobs-calc.git`
 
 ##### Passo 2. Acesse a pasta do projeto: `cd jobs-calc`
 
